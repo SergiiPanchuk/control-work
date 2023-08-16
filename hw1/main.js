@@ -41,6 +41,8 @@ console.log(typeof a, typeof b, typeof c)
 
 let name = prompt('your name');
 let secondName = prompt('your last name');
-let age = prompt('your age')
+let age = parseInt(prompt('your age'));
 
-console.log(`${name} ${secondName} ${age}`)
+console.log(`${name} ${secondName} ${age}`);
+console.log(age);
+
