@@ -16,34 +16,19 @@ const BookOne= {
     pageCount: 432,
     genre: 'biography'
 }
+BookOne.authors = ['Colleen Hoover', 35];
 const BookTwo= {
     title: 'Point of Retreat',
     pageCount: 400,
     genre: 'detective'
     }
+BookTwo.authors = ['Colleen Hoover', 35];
 const BookThree= {
     title: 'Slammed',
     pageCount: 385,
     genre: 'detective'
     }
-const BookFour= {
-    title: 'The Churchill Factor',
-    pageCount: 432,
-    genre: 'biography',
-    authors: ['Colleen Hoover', 35]
-}
-const BookFive= {
-    title: 'The Churchill Factor',
-    pageCount: 432,
-    genre: 'biography',
-    authors: ['Colleen Hoover', 35]
-}
-const BookSix= {
-    title: 'The Churchill Factor',
-    pageCount: 432,
-    genre: 'biography',
-    authors: ['Boris Johnson', 59]
-}
+BookThree.authors = ['Boris Johnson', 59];
 
 const Users = [
     {
