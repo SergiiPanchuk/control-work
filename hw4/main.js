@@ -15,11 +15,11 @@ areaCircle(4);
 
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
-function areaСylinder(h, rad) {
+function areaCylinder(h, rad) {
     console.log(2 * Math.PI * rad * (h + rad));
 }
 
-areaСylinder(3, 5);
+areaCylinder(3, 5);
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
 function returnElementOfArr(array) {
@@ -141,6 +141,22 @@ function swap(arr, index1, index2) {
 
 swap([11, 22, 33, 44, 77, 12], 1, 5)
 
+function swap2(arr, index1, index2) {
+    const newArr2 = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (i === index1) {
+            newArr2[index2] = arr[i];
+        } else if (i === index2) {
+            newArr2[index1] = arr[i];
+        } else {
+            newArr2[i] = arr[i];
+        }
+    }
+    document.write(`<div>${newArr2}</div>`)
+}
+
+swap2([11, 22, 33, 44, 77, 12], 1, 5)
+
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
 
@@ -159,4 +175,5 @@ function exchange(sumUAH, currencyValues, exchangeCurrency) {
     }
 }
 
-exchange(1000, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}], 'USD');
+exchange(100, [{currency: 'USD', value: 40}, {currency: 'EUR', value: 42}], 'USD');
+
