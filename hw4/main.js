@@ -164,7 +164,7 @@ function exchange(sumUAH, currencyValues, exchangeCurrency) {
     let result;
     for (const obj of currencyValues) {
         if (obj['currency'] === exchangeCurrency) {
-            result = sumUAH * obj['value'];
+            result = sumUAH / obj['value'];
         }
 
     }
