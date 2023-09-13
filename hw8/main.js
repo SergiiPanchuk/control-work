@@ -202,17 +202,27 @@ let coursesArray = [
 for (const arrayElement of coursesArray) {
     let divArr = document.createElement('div');
     let divModules = document.createElement('div');
-    divArr.innerHTML =`<div>${arrayElement['title']}</div><div id="month">${arrayElement['monthDuration']}</div><div id="hour">${arrayElement['hourDuration']}</div>`;
+    divArr.innerHTML =`<div>${arrayElement['title']}</div><div class="month">${arrayElement['monthDuration']}</div><div class="hour">${arrayElement['hourDuration']}</div>`;
 
     for (const element of arrayElement['modules']) {
-        let divList = document.createElement('div');
-        divList.innerHTML = `<div>${element}</div>`;
-        divModules.appendChild(divList);
+        let ul = document.createElement('ul');
+        ul.innerHTML = `<li>${element}</li>`;
+        divModules.appendChild(ul);
     }
 
     divArr.appendChild(divModules);
     document.body.appendChild(divArr);
 
+    let month = document.getElementsByClassName('month')   ;
+    for (const monthElement of month) {
+        monthElement.style.width = '30%';
+
+    }
+
+    let hour = document.getElementsByClassName('hour')   ;
+    for (const hourElement of hour) {
+        hourElement.style.width = '69%'
+    }
 
     divArr.style.border = 'solid 1px black';
     divArr.style.textAlign = 'center';
