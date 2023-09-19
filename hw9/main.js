@@ -39,7 +39,7 @@ window.addEventListener('load', function (ev) {
 // При натисканні prev виводяться попередні 10 об'єктів
 
 let arrHundred = [];
-for (let i = 1; i <= 100; i++) {
+for (let i = 1; i <= 87; i++) {
     const newObj = {
         id: i
     };
@@ -62,21 +62,24 @@ renderCarousel();
 
 const btnNext = document.querySelector('.btn_next');
 btnNext.addEventListener('click', function () {
-    if (lastId === 100) {
-        lastId = 0;
+    if (lastId + 10 > arrHundred.length) {
+        btnNext.setAttribute('disabled', 'disabled');
     }
     divCarousel.innerHTML = '';
     renderCarousel(lastId);
+    btnPrew.removeAttribute('disabled')
 })
 const btnPrew = document.querySelector('.btn_prew');
 btnPrew.addEventListener('click', function () {
-    if (lastId === 10) {
-        lastId = 90;
+    if (lastId - 10 <= 10) {
+        btnPrew.setAttribute('disabled', 'disabled');
+        lastId = 0;
     } else {
         lastId = lastId - 20;
     }
     divCarousel.innerHTML = '';
     renderCarousel(lastId);
+    btnNext.removeAttribute('disabled')
 })
 
 
@@ -132,7 +135,7 @@ const startTime = Date.now();
 localStorage.getItem('money') ? divMoney.innerText = localStorage.getItem('money') : divMoney.innerText = '100грн';
 
 console.log(divMoney.innerText);
-//console.log(divMoney.innerText = Number(divMoney.innerText.slice(0, -3)) + 10);
+
 if (localStorage.getItem('sessionStartTime') && startTime - +localStorage.getItem('sessionStartTime') >= 10000) {
     divMoney.innerText = Number(divMoney.innerText.slice(0, -3)) + 10 + 'грн';
     localStorage.setItem('money', divMoney.innerText);
