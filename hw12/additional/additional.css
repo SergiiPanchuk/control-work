@@ -1,0 +1,9 @@
+.product {
+    display: flex;
+    align-items: center;
+    border: black solid 1px;
+}
+.product_img {
+    width: 70px;
+    height: 70px;
+}
