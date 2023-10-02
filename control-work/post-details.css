@@ -1,0 +1,23 @@
+.post_info {
+    font-size: 18px;
+    margin: 5px;
+    padding: 10px;
+    background: dimgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comments_wrapper {
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+.comment_block {
+    width: 20%;
+    background: dimgrey;
+    margin: 10px;
+    padding: 10px;
+}

@@ -1,0 +1,34 @@
+.users_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+.users_wrap div {
+    width: 35%;
+    background: dimgrey;
+    margin: 15px;
+    padding: 15px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.link_details {
+    width: 150px;
+    height: 40px;
+    background: black;
+    border-radius: 10%;
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link_details:hover {
+    color: black;
+    background: white;
+}
+
+

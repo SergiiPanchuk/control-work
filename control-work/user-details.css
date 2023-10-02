@@ -1,0 +1,65 @@
+
+.user_wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    background: dimgrey;
+    font-size: 18px;
+    margin: auto;
+}
+
+.user_wrap button {
+    width: 150px;
+    height: 40px;
+    background: black;
+    border-radius: 10%;
+    border: none;
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_wrap button:hover {
+    color: black;
+    background: white;
+}
+
+.titles_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+.titles_wrap div {
+    width: 17%;
+    margin: 5px;
+    padding: 10px;
+    background: dimgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.titles_wrap div p {
+    text-align: center;
+    font-size: 18px;
+}
+.titles_wrap div a {
+    width: 150px;
+    height: 40px;
+    background: black;
+    border-radius: 10%;
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.titles_wrap div a:hover {
+    color: black;
+    background: white;
+}
